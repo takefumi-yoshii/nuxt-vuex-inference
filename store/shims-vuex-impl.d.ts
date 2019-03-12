@@ -7,7 +7,7 @@ declare module 'vuex' {
     counter: Counter.S
     todos: Todos.S
   }
-  type RootGetters = Counter.GG & Todos.GG
-  type RootMutations = Counter.GM & Todos.GM
-  type RootActions = Counter.GA & Todos.GA
+  type RootGetters = Counter.RG & Todos.RG
+  type RootMutations = Counter.RM & Todos.RM
+  type RootActions = Counter.RA & Todos.RA
 }

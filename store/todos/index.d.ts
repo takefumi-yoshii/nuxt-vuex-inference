@@ -15,7 +15,7 @@ export interface G {
   todosCount: number
   doneCount: number
 }
-export interface GG {
+export interface RG {
   'todos/todosCount': G['todosCount']
   'todos/doneCount': G['doneCount']
 }
@@ -25,7 +25,7 @@ export interface M {
   addTodo: { todo: Todo }
   doneTodo: { id: string }
 }
-export interface GM {
+export interface RM {
   'todos/addTodo': M['addTodo']
   'todos/doneTodo': M['doneTodo']
 }
@@ -35,7 +35,7 @@ export interface A {
   asyncAddTodo: { todo: Todo }
   asyncDoneTodo: { id: string }
 }
-export interface GA {
+export interface RA {
   'todos/asyncAddTodo': A['asyncAddTodo']
   'todos/asyncDoneTodo': A['asyncDoneTodo']
 }

@@ -10,7 +10,7 @@ export interface G {
   expo2: number
   expo: (amount: number) => number
 }
-export interface GG {
+export interface RG {
   'counter/double': G['double']
   'counter/expo2': G['expo2']
   'counter/expo': G['expo']
@@ -23,7 +23,7 @@ export interface M {
   increment: unknown
   decrement: unknown
 }
-export interface GM {
+export interface RM {
   'counter/setCount': M['setCount']
   'counter/multi': M['multi']
   'counter/increment': M['increment']
@@ -37,7 +37,7 @@ export interface A {
   asyncIncrement: unknown
   asyncDecrement: unknown
 }
-export interface GA {
+export interface RA {
   'counter/asyncSetCount': A['asyncSetCount']
   'counter/asyncMulti': A['asyncMulti']
   'counter/asyncIncrement': A['asyncIncrement']
