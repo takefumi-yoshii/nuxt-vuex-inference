@@ -4,7 +4,7 @@ import Counter from './counter/index.d'
 declare module 'vuex' {
   // ______________________________________________________
   //
-  export type Getters<S, G> = {
+  type Getters<S, G> = {
     [K in keyof G]: (
       state: S,
       getters: G,
@@ -32,12 +32,12 @@ declare module 'vuex' {
   }
   // ______________________________________________________
   //
-  export interface ExStore extends Store<RootState> {
+  interface ExStore extends Store<RootState> {
     getters: RootGetters
     commit: ExCommit<RootMutations>
     dispatch: ExDispatch<RootActions>
   }
-  export type StoreContext = ExContext<
+  type StoreContext = ExContext<
     RootState,
     RootActions,
     RootGetters,

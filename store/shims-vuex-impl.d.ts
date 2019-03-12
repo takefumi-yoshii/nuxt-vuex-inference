@@ -3,11 +3,11 @@ import Counter from './counter/index.d'
 import Todos from './todos/index.d'
 
 declare module 'vuex' {
-  export type RootState = {
+  type RootState = {
     counter: Counter.S
     todos: Todos.S
   }
-  export type RootGetters = Counter.GG & Todos.GG
-  export type RootMutations = Counter.GM & Todos.GM
-  export type RootActions = Counter.GA & Todos.GA
+  type RootGetters = Counter.GG & Todos.GG
+  type RootMutations = Counter.GM & Todos.GM
+  type RootActions = Counter.GA & Todos.GA
 }
