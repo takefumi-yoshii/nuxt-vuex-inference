@@ -1,0 +1,17 @@
+{
+  "extends": "@nuxt/typescript",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "types": [
+      "@types/node",
+      "@nuxt/vue-app",
+    ]
+  },
+  "include": [
+    "./vue-shims.d.ts",
+    "./vuex-shims.d.ts",
+    "./store/**/*"
+  ]
+}
