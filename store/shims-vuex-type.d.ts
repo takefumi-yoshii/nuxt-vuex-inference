@@ -18,7 +18,7 @@ declare module 'vuex' {
   //
   type ExCommit<M> = <T extends keyof M>(type: T, payload?: M[T]) => void
   type ExDispatch<A> = <T extends keyof A>(type: T, payload?: A[T]) => any
-  type ExContext<S, A, G, M> = {
+  type ExActionContext<S, A, G, M> = {
     commit: ExCommit<M>
     dispatch: ExDispatch<A>
     state: S
@@ -27,7 +27,7 @@ declare module 'vuex' {
     rootGetters: RootGetters
   }
   type Actions<S, A, G = {}, M = {}> = {
-    [K in keyof A]: (ctx: ExContext<S, A, G, M>, payload: A[K]) => any
+    [K in keyof A]: (ctx: ExActionContext<S, A, G, M>, payload: A[K]) => any
   }
   // ______________________________________________________
   //
@@ -36,7 +36,7 @@ declare module 'vuex' {
     commit: ExCommit<RootMutations>
     dispatch: ExDispatch<RootActions>
   }
-  type StoreContext = ExContext<
+  type StoreContext = ExActionContext<
     RootState,
     RootActions,
     RootGetters,
