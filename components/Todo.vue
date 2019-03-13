@@ -20,8 +20,9 @@ export default class extends Vue {
   @Prop() data!: Todo
   
   doneTodo() {
-    const payload = { id: this.data.id }
-    this.$store.dispatch('todos/asyncDoneTodo', payload)
+    this.$store.dispatch('todos/asyncDoneTodo', {
+      id: this.data.id
+    })
   }
   get dateLabel() {
     const date = this.data.createdAt

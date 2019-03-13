@@ -1,5 +1,4 @@
 import { Store } from 'vuex'
-import Counter from './counter/index.d'
 
 declare module 'vuex' {
   // ______________________________________________________

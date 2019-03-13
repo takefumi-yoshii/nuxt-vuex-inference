@@ -23,7 +23,14 @@ export default class extends Vue {
       task: this.todoTask,
       done: false
     }
-    this.$store.dispatch('todos/asyncAddTodo', { todo }).then(() => {
+    this.$store.dispatch('todos/asyncAddTodo', {
+        todo: {
+          id: uuid(),
+          createdAt: new Date(),
+          task: this.todoTask,
+          done: false
+        }
+      }).then(() => {
       this.todoTask = ''
     })
   }

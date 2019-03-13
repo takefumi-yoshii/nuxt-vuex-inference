@@ -15,9 +15,9 @@ export default class extends Vue {
   inputCount: string = ''
 
   setCount() {
-    const payload = { amount: Number(this.inputCount) }
-    console.log(payload)
-    this.$store.dispatch('counter/asyncSetCount', payload)
+    this.$store.dispatch('counter/asyncSetCount', {
+      amount: Number(this.inputCount)
+    })
   }
 }
 </script>
