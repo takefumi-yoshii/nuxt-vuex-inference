@@ -7,9 +7,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import * as Vuex from "vuex"
-import uuid from "uuid/v4"
-import Todo from "./Todo.vue"
+import * as Vuex from 'vuex'
+import uuid from 'uuid/v4'
+import Todo from './Todo.vue'
 
 @Component({ components: { Todo } })
 export default class extends Vue {
@@ -23,16 +23,18 @@ export default class extends Vue {
       task: this.todoTask,
       done: false
     }
-    this.$store.dispatch('todos/asyncAddTodo', {
+    this.$store
+      .dispatch('todos/asyncAddTodo', {
         todo: {
           id: uuid(),
           createdAt: new Date(),
           task: this.todoTask,
           done: false
         }
-      }).then(() => {
-      this.todoTask = ''
-    })
+      })
+      .then(() => {
+        this.todoTask = ''
+      })
   }
 }
 </script>

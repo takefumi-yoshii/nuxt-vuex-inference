@@ -17,8 +17,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import * as Vuex from "vuex"
-import CounterForm from "./CounterForm.vue"
+import * as Vuex from 'vuex'
+import CounterForm from './CounterForm.vue'
 
 @Component({ components: { CounterForm } })
 export default class extends Vue {
@@ -59,7 +59,8 @@ hr {
   border: 2px solid #000;
   border-radius: 10px;
 }
-.description, .form {
+.description,
+.form {
   display: flex;
   overflow: hidden;
 }

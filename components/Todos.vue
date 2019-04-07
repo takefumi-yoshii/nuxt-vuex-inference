@@ -13,10 +13,10 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import * as Vuex from "vuex"
-import TodosForm from "./TodosForm.vue"
-import TodosList from "./TodosList.vue"
-import Todo from "./Todo.vue"
+import * as Vuex from 'vuex'
+import TodosForm from './TodosForm.vue'
+import TodosList from './TodosList.vue'
+import Todo from './Todo.vue'
 
 @Component({
   components: { TodosForm, TodosList }
@@ -24,7 +24,7 @@ import Todo from "./Todo.vue"
 export default class extends Vue {
   $store: Vuex.ExStore
   todoTask: string = ''
-  
+
   get todosCount() {
     return this.$store.getters['todos/todosCount']
   }

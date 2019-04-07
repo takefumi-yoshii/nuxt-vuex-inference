@@ -11,14 +11,15 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import * as Vuex from "vuex"
-import { Todo } from "../store/todos/index.d"
+import * as Vuex from 'vuex'
+import { Todo } from '../store/todos/index.d'
 
 @Component
 export default class extends Vue {
   $store: Vuex.ExStore
-  @Prop() data!: Todo
-  
+  @Prop()
+  data!: Todo
+
   doneTodo() {
     this.$store.dispatch('todos/asyncDoneTodo', {
       id: this.data.id
@@ -40,7 +41,7 @@ export default class extends Vue {
   user-select: none;
 }
 .todo.done {
-  opacity: .2;
+  opacity: 0.2;
 }
 .todo.done button {
   pointer-events: none;
