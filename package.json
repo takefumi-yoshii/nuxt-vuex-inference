@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "prettier": "prettier './store/**/*.ts' --write"
+    "prettier": "prettier './**/*.{ts,vue}' --write"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
