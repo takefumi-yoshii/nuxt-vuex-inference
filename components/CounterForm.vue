@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import * as Vuex from "vuex"
+import * as Vuex from 'vuex'
 
 @Component
 export default class extends Vue {
