@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "experimentalDecorators": true,
+    "noUnusedParameters": false,
     "allowJs": true,
     "types": [
       "@types/node",
@@ -12,6 +13,7 @@
   "include": [
     "./vue-shims.d.ts",
     "./vuex-shims.d.ts",
-    "./store/**/*"
+    "./store/**/*",
+    "./api/**/*"
   ]
 }
