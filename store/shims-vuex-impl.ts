@@ -1,6 +1,6 @@
 import 'vuex'
-import Counter from './counter/index.d'
-import Todos from './todos/index.d'
+import * as Counter from './counter/type'
+import * as Todos from './todos/type'
 
 declare module 'vuex' {
   type RootState = {

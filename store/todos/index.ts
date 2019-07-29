@@ -1,5 +1,5 @@
 import { Getters, Mutations, Actions } from 'vuex'
-import { S, G, M, A } from './index.d'
+import { S, G, M, A } from './type'
 // ______________________________________________________
 //
 export const state = (): S => ({

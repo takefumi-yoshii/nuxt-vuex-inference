@@ -1,5 +1,4 @@
-import { Store } from 'vuex'
-
+import 'vuex'
 declare module 'vuex' {
   // ______________________________________________________
   //

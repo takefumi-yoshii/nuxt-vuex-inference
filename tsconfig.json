@@ -1,18 +1,14 @@
 {
-  "extends": "@nuxt/typescript",
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
     "baseUrl": ".",
     "experimentalDecorators": true,
     "noUnusedParameters": false,
-    "allowJs": true,
-    "types": [
-      "@types/node",
-      "@nuxt/vue-app",
-    ]
+    "esModuleInterop": true
   },
   "include": [
-    "./vue-shims.d.ts",
-    "./vuex-shims.d.ts",
     "./store/**/*",
     "./api/**/*"
   ]
