@@ -10,10 +10,10 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import * as Vuex from "vuex"
-import Todo from "./Todo.vue"
+import * as Vuex from 'vuex'
+import Todo from './Todo.vue'
 
-@Component({ components: { Todo }})
+@Component({ components: { Todo } })
 export default class extends Vue {
   $store: Vuex.ExStore
   get todos() {
